@@ -2,7 +2,15 @@
 
 This project is a *work in progress*. The implementation is *incomplete* and subject to change. The documentation can be inaccurate.
 
-# INFO
+# Requeriments
+
+The required modules may be installed (probably under a virtualenv) using:
+
+      pip install -r requirements.txt
+
+Note: before installing `matplotlib`, it may be necessary that your system has installed the packages with the C header files and .SO files for `libpng-devel` and `freetype-devel`.
+
+# Info
 
 Get the waves time-series of a National Buoy Data Center buoy into a Panda dataframe, using buoyant.
 
