@@ -135,9 +135,16 @@ def main_test():
         (ts_df - ts_df.values.min()) /
         (ts_df.values.max() - ts_df.values.min())
     )
-    normalized_ts.plot()
+    legend = (
+        normalized_ts.plot()
+        .legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    )
+
+    plt.title('Buoy {}'.format(buoy_id), color='blue')
     fig = plt.gcf()
-    fig.savefig("plot_of_buoy_waves_ts.png")
+    fig.set_size_inches(9, 7)
+    fig.savefig("plot_of_buoy_waves_ts.png", dpi=96,
+                bbox_extra_artists=(legend,), bbox_inches='tight')
 
     # plt.show()
 
